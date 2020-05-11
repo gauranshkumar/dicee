@@ -46,20 +46,23 @@ class _BodyPageState extends State<BodyPage> {
     int temp = leftDiceNumber + rightDiceNumer;
     String str;
     if ((temp % 2) == 0) {
-      str = "Even!!\nIt's $temp";
+      str = "Even!! It's $temp";
     } else {
-      str = "Odd!!\nIt's $temp";
+      str = "Odd!! It's $temp";
     }
-    return Padding(
-      padding: const EdgeInsets.all(16.0),
-      child: Text(
-        str,
-        style: TextStyle(
-            color: Colors.amberAccent,
-            fontWeight: FontWeight.w900,
-            fontSize: 72.0,
-            fontFamily: 'Comfortaa'),
-        textAlign: TextAlign.center,
+    return Expanded(
+      flex: 1,
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Text(
+          str,
+          style: TextStyle(
+              color: Colors.amberAccent,
+              fontWeight: FontWeight.w900,
+              fontSize: 64.0,
+              fontFamily: 'Comfortaa'),
+          textAlign: TextAlign.center,
+        ),
       ),
     );
   }
@@ -69,53 +72,73 @@ class _BodyPageState extends State<BodyPage> {
     return Container(
       child: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(
-              "To Break A Tie : ",
-              style: TextStyle(
-                  color: Colors.amberAccent,
-                  fontWeight: FontWeight.w800,
-                  fontSize: 36.0,
-                  fontFamily: 'Comfortaa'),
-              textAlign: TextAlign.left,
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  "To Break A Tie : ",
+                  style: TextStyle(
+                      color: Colors.amberAccent,
+                      fontWeight: FontWeight.w800,
+                      fontSize: 36.0,
+                      fontFamily: 'Comfortaa'),
+                  textAlign: TextAlign.left,
+                ),
+              ),
             ),
-            Text(
-              "1. Choose Odd or Even.\n2. Tap the Dice below.",
-              style: TextStyle(
-                  color: Colors.amberAccent,
-                  fontWeight: FontWeight.w200,
-                  fontSize: 24.0,
-                  fontFamily: 'Comfortaa'),
-              textAlign: TextAlign.left,
+            Expanded(
+              flex: 1,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  "1. Choose Odd or Even.\n2. Tap the Dice below.",
+                  style: TextStyle(
+                      color: Colors.amberAccent,
+                      fontWeight: FontWeight.w200,
+                      fontSize: 24.0,
+                      fontFamily: 'Comfortaa'),
+                  textAlign: TextAlign.left,
+                ),
+              ),
             ),
-            Row(
-              children: [
-                Expanded(
-                  child: FlatButton(
-                    child: ColorFiltered(
-                      child: Image.asset("images/dice$leftDiceNumber.png"),
-                      colorFilter:
-                          ColorFilter.mode(Colors.amber, BlendMode.color),
-                    ),
-                    onPressed: () {
-                      changeNumber();
-                    },
+            Expanded(
+              flex: 1,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: FlatButton(
+                          child: ColorFiltered(
+                            child: Image.asset("images/dice$leftDiceNumber.png"),
+                            colorFilter:
+                                ColorFilter.mode(Colors.amber, BlendMode.color),
+                          ),
+                          onPressed: () {
+                            changeNumber();
+                          },
+                        ),
+                      ),
+                      Expanded(
+                        child: FlatButton(
+                          child: ColorFiltered(
+                            child: Image.asset("images/dice$rightDiceNumer.png"),
+                            colorFilter:
+                                ColorFilter.mode(Colors.amber, BlendMode.color),
+                          ),
+                          onPressed: () {
+                            changeNumber();
+                          },
+                        ),
+                      ),
+                    ],
                   ),
                 ),
-                Expanded(
-                  child: FlatButton(
-                    child: ColorFiltered(
-                      child: Image.asset("images/dice$rightDiceNumer.png"),
-                      colorFilter:
-                          ColorFilter.mode(Colors.amber, BlendMode.color),
-                    ),
-                    onPressed: () {
-                      changeNumber();
-                    },
-                  ),
-                ),
-              ],
+              ),
             ),
             Container(
               child: flag,
