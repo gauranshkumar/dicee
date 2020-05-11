@@ -1,8 +1,19 @@
-# dicee
+# Tie-Break
 
-A new Flutter project.
+A new Flutter project to break the tie .
 
-## Getting Started
+![Screenshot](extra/app.gif)
+****
+## Install Instructions
+1. Clone the repo or open *Android Studio* and click `Open From Source Control` and paste the repo link.
+2. Get the dependencies using command `flutter pub get`
+3. To run app use `flutter run -d <deviceName>` here at the place of deviceName put the name of device you want to run in.
+****
+## Features:
+-   Eye Catching Color Schemes.
+-   Supports both ***Landscape and Portrait Mode.***
+****
+## Getting Started with Flutter
 
 This project is a starting point for a Flutter application.
 
