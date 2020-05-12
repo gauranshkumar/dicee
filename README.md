@@ -9,7 +9,7 @@ A new Flutter project to break the tie .
 2. Get the dependencies using command `flutter pub get`
 3. To run app use `flutter run -d <deviceName>` here at the place of deviceName put the name of device you want to run in.
 
-> Test it live as a WebApp here [Tie-Break](https://gauranshkumar.github.io/tie-break/)
+> **Test it live as a *WebApp* here [Tie-Break](https://gauranshkumar.github.io/tie-break/)**
 ****
 ## Features:
 -   Eye Catching Color Schemes.
