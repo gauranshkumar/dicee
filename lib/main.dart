@@ -113,11 +113,7 @@ class _BodyPageState extends State<BodyPage> {
                     children: [
                       Expanded(
                         child: FlatButton(
-                          child: ColorFiltered(
-                            child: Image.asset("images/dice$leftDiceNumber.png"),
-                            colorFilter:
-                                ColorFilter.mode(Colors.amber, BlendMode.color),
-                          ),
+                          child: Image.asset("images/dice$leftDiceNumber.png"),
                           onPressed: () {
                             changeNumber();
                           },
@@ -125,11 +121,7 @@ class _BodyPageState extends State<BodyPage> {
                       ),
                       Expanded(
                         child: FlatButton(
-                          child: ColorFiltered(
-                            child: Image.asset("images/dice$rightDiceNumer.png"),
-                            colorFilter:
-                                ColorFilter.mode(Colors.amber, BlendMode.color),
-                          ),
+                          child: Image.asset("images/dice$rightDiceNumer.png"),
                           onPressed: () {
                             changeNumber();
                           },
